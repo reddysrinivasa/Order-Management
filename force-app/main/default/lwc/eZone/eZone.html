@@ -1,0 +1,65 @@
+<template>
+  <template if:true={isShowModal}>
+<section role="dialog" tabindex="-1" aria-modal="true" aria-labelledby="modal-heading-01" class="slds-modal slds-fade-in-open slds-modal_small">
+  <div class="slds-modal__container">
+    <button onclick={cancel} class="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse">
+      <img  class="slds-button__icon slds-button__icon_large" aria-hidden="true" src={clos}>    
+      <span class="slds-assistive-text">Cancel and close</span>
+    </button>
+    <button class="slds-button slds-button--icon" title="settings">
+      <span class="slds-assistive-text">Settings</span>
+  </button>
+  <div class="slds-modal__header">
+  <h1 id="modal-heading-01" class="slds-modal__title slds-hyphenate">Hero Pen (MODEL - 0021)</h1>
+  </div>
+  
+  <div class="slds-modal__content slds-p-around_medium" id="modal-content-id-1">
+    
+      <div class="slds-grid slds-gutters">
+        <div class="slds-col slds-size_1-of-3">
+          <span>
+            <img src={}>
+          </span>
+        </div>
+        <div class="slds-col slds-size_2-of-3">
+          <span>
+            <div style="text-align:left; padding-left:20px;">
+            <strong>Hero Pen (2021)</strong>
+            
+               <ul>
+              <li>Price : ₹200</li>
+              <li style="color:rgb(5, 136, 16)">In Stocks({QuantA})</li>
+              <li>Made In India</li>
+              <li>
+                <button class="slds-button slds-button_brand " onclick={subQ}>-</button>
+                <strong class="slds-m-left_x-small slds-m-right_x-small" >{myQuantity}</strong>
+                <button class="slds-button slds-button_brand " onclick={addQ}>+</button>         
+              </li>
+              <li>
+               <button class="slds-button slds-button_brand slds-m-top_medium " onclick={showToast}>Add To Cart<span class="slds-assistive-text">Add Now</span></button>
+               
+              </li>
+            </ul>
+          </div>     
+          </span>
+        </div>
+      </div>
+      
+      
+    
+        <p> 
+        <strong> Description : </strong>
+          Dolor eiusmod sunt ex incididunt cillum quis nostrud velit duis sit officia. Lorem aliqua enim laboris do dolor eiusmod officia. Mollit incididunt nisi consectetur esse laborum eiusmod pariatur proident. Eiusmod et adipisicing culpa deserunt nostrud
+        ad veniam nulla aute est. Labore esse esse cupidatat amet velit id elit consequat minim ullamco mollit enim excepteur ea.Dolor eiusmod sunt ex incididunt cillum quis nostrud velit duis sit officia. Lorem aliqua enim laboris do dolor eiusmod officia. Mollit incididunt nisi consectetur esse laborum eiusmod pariatur proident. Eiusmod et adipisicing culpa deserunt nostrud
+        ad veniam nulla aute est. Labore esse esse cupidatat amet velit id elit consequat minim ullamco mollit enim excepteur ea.
+      </p>
+  </div>
+  <div class="slds-modal__footer">
+  <button class="slds-button slds-button_neutral" aria-label="Cancel and close" onclick={cancel}>Cancel</button>
+  
+  </div>
+  </div>
+  </section>
+  <div class="slds-backdrop slds-backdrop_open" role="presentation"></div>
+  </template>
+</template>

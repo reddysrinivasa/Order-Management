@@ -1,0 +1,13 @@
+<!-- sldsValidatorIgnore -->
+<template>
+    <!--<h2> Open Cart</h2>-->
+    <lightning-card title="Open Cart">
+    <template if:true={accList}>
+        <lightning-datatable data={accList} columns={columns} key-field="Id">
+        </lightning-datatable>
+    </template>
+    <template if:true={error}>
+        {error}
+    </template>
+</lightning-card>
+</template>

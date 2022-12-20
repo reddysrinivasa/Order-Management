@@ -1,0 +1,16 @@
+<!-- sldsValidatorIgnore -->
+<!-- sldsValidatorIgnore -->
+<template>
+  <!--  <h2> Recent Order </h2> -->
+  <lightning-card  title="Recent Order">
+
+    <template if:true={accList}>
+        <lightning-datatable data={accList} columns={columns} key-field="Id">
+        </lightning-datatable>
+    </template>
+    <template if:true={error}>
+        {error}
+    </template>  
+              
+</lightning-card>
+</template>

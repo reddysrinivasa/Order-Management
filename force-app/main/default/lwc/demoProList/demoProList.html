@@ -1,0 +1,9 @@
+<template>
+    <lightning-card>
+        <template for:each={proList} for:item="prods" >
+            <div key={prods.id}>
+            Name : {prods.name}<br/>
+            </div>
+        </template>
+    </lightning-card>
+</template>

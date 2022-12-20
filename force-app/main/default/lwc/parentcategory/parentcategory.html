@@ -1,0 +1,30 @@
+<template>
+    <lightning-card title="Parent Category">
+        <table class="slds-table slds-table_cell-buffer slds-table_bordered" border="1" cellspacing="0" cellpadding="0"
+            style="border-collapse:collapse;">
+            <thead>
+                <tr>
+                    <th>Select</th>
+                    <th>Name</th>
+                    <th>View</th>
+                </tr>
+            </thead>
+            <template for:each={parentCat.data} for:item="pcItem">
+                <tr key={pcItem.Id}>
+                    <td>
+                        <lightning-input type="radio" name="radioButtonSelect" value={pcItem.Id}
+                            onchange={handleChangeRadio}></lightning-input>
+                    </td>
+                    <td>{pcItem.Name}</td>
+                    <td>
+                        <lightning-button-icon icon-name="utility:preview" alternative-text="View"
+                            class="slds-m-left_xx-small" title="View" name={pcItem.Id} onclick={viewModal}></lightning-button-icon>
+                    </td>
+                </tr>
+            </template>
+        </table>
+        <template if:true={showModal}>
+        <c-model-component rec-id={pcId} is-show-modal={showModal} onshow={handleShow}></c-model-component>
+        </template>
+    </lightning-card>
+</template>

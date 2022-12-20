@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <alerts>
+        <fullName>Order_Delivered</fullName>
+        <description>Order Delivered</description>
+        <protected>false</protected>
+        <recipients>
+            <field>Customer__c</field>
+            <type>contactLookup</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>order_management/delivered</template>
+    </alerts>
+    <alerts>
+        <fullName>Order_has_been_shipped</fullName>
+        <description>Order has been shipped</description>
+        <protected>false</protected>
+        <recipients>
+            <field>Customer__c</field>
+            <type>contactLookup</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>order_management/shipped</template>
+    </alerts>
+    <alerts>
+        <fullName>Order_is_cancelled</fullName>
+        <description>Order is cancelled</description>
+        <protected>false</protected>
+        <recipients>
+            <field>Customer__c</field>
+            <type>contactLookup</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>order_management/Cancelled</template>
+    </alerts>
+    <alerts>
+        <fullName>Order_payment</fullName>
+        <description>Order payment</description>
+        <protected>false</protected>
+        <recipients>
+            <field>Customer__c</field>
+            <type>contactLookup</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>order_management/payment</template>
+    </alerts>
+    <alerts>
+        <fullName>Order_returned</fullName>
+        <description>Order returned</description>
+        <protected>false</protected>
+        <recipients>
+            <field>Customer__c</field>
+            <type>contactLookup</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>order_management/Returned</template>
+    </alerts>
+    <alerts>
+        <fullName>Out_for_delivery</fullName>
+        <description>Out for delivery</description>
+        <protected>false</protected>
+        <recipients>
+            <field>Customer__c</field>
+            <type>contactLookup</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>order_management/Delivery</template>
+    </alerts>
+    <alerts>
+        <fullName>order_created</fullName>
+        <description>order created</description>
+        <protected>false</protected>
+        <recipients>
+            <field>Customer__c</field>
+            <type>contactLookup</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>order_management/confirm</template>
+    </alerts>
+    <alerts>
+        <fullName>order_has_to_be_pocessed</fullName>
+        <description>order has to be pocessed</description>
+        <protected>false</protected>
+        <recipients>
+            <field>Customer__c</field>
+            <type>contactLookup</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>order_management/process</template>
+    </alerts>
+    <alerts>
+        <fullName>return_requested</fullName>
+        <description>return requested</description>
+        <protected>false</protected>
+        <recipients>
+            <field>Customer__c</field>
+            <type>contactLookup</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>order_management/ReturnReq</template>
+    </alerts>
+</Workflow>
